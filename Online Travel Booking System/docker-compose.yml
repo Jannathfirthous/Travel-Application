@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+    
+    
+   
+    travel-flightbooking:        
+        build: OnlineTravel_Sprint1
+        ports:
+        - 8023:8023
+     
+  
+
+    postgres:        
+        image: postgres:14.5
+        ports:
+        - 5432:5432
+       
+        environment:
+            POSTGRES_USER: postgres
+            POSTGRES_PASSWORD: pgadmin
+            POSTGRES_DB: flightbookingdb
